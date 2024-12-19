@@ -52,17 +52,17 @@ export default function LoginForm() {
 					return;
 				}
 
-				const { error, success, data } = resp;
+				const { error, success } = resp;
 
-				if (data?.twoFactorAuthEnabled) {
-					setShowOTP(true);
-					if (resp.error) {
-						setError(resp.error);
-						setSuccess("");
-						return;
-					}
-					return;
-				}
+				// if (data?.twoFactorAuthEnabled) {
+				// 	setShowOTP(true);
+				// 	if (resp.error) {
+				// 		setError(resp.error);
+				// 		setSuccess("");
+				// 		return;
+				// 	}
+				// 	return;
+				// }
 
 				if (error) {
 					setError(resp.error);

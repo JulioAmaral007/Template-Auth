@@ -24,10 +24,10 @@ export const {
 			if (account && (account.provider === "google" || account.provider === "github")) {
 				return true;
 			}
-			if (user.email) {
-				const registeredUser = await findUserByEmail(user?.email);
-				if (!registeredUser?.emailVerified) return false;
-			}
+			// if (user.email) {
+			// 	const registeredUser = await findUserByEmail(user?.email);
+			// 	if (!registeredUser?.emailVerified) return false;
+			// }
 			return true;
 		},
 		async jwt({ token, user, trigger, session }) {
